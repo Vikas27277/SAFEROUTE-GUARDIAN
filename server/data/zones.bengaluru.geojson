@@ -1,0 +1,2989 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-01",
+        "name": "Simulated Zone A",
+        "risk": "red",
+        "risk_category": "elevated",
+        "mult_daytime": 1.2,
+        "mult_evening": 1.5,
+        "mult_night": 1.8,
+        "note": "Illustrative synthetic polygon. Medium zone on a short direct corridor; simulated weight rises through the evening and night profiles. Does not describe any real place, incident or person. Simulated demo data, not real-time safety information.",
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S1_DIRECT_VS_DETOUR",
+        "size_class": "medium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.62416,
+              12.95245
+            ],
+            [
+              77.61692,
+              12.95743
+            ],
+            [
+              77.60789,
+              12.96176
+            ],
+            [
+              77.59977,
+              12.95524
+            ],
+            [
+              77.59584,
+              12.94755
+            ],
+            [
+              77.60351,
+              12.94303
+            ],
+            [
+              77.61211,
+              12.93824
+            ],
+            [
+              77.61967,
+              12.94505
+            ],
+            [
+              77.62416,
+              12.95245
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-02",
+        "name": "Simulated Zone B",
+        "risk": "green",
+        "risk_category": "low",
+        "mult_daytime": 0.6,
+        "mult_evening": 0.7,
+        "mult_night": 0.9,
+        "note": "Illustrative synthetic polygon. Low-category zone south of the direct corridor, so a southern alternative crosses a different category. Does not describe any real place, incident or person. Simulated demo data, not real-time safety information.",
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S1_DIRECT_VS_DETOUR",
+        "size_class": "medium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.60096,
+              12.93579
+            ],
+            [
+              77.59677,
+              12.92922
+            ],
+            [
+              77.60064,
+              12.92279
+            ],
+            [
+              77.60552,
+              12.91631
+            ],
+            [
+              77.61181,
+              12.92089
+            ],
+            [
+              77.61142,
+              12.92868
+            ],
+            [
+              77.60819,
+              12.93573
+            ],
+            [
+              77.60096,
+              12.93579
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-03",
+        "name": "Simulated Zone C",
+        "risk": "yellow",
+        "risk_category": "moderate",
+        "mult_daytime": 1,
+        "mult_evening": 1.2,
+        "mult_night": 1.3,
+        "note": "Illustrative synthetic polygon. Small zone used to test brief edge clipping by a northern route. Does not describe any real place, incident or person. Simulated demo data, not real-time safety information.",
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S1_DIRECT_VS_DETOUR",
+        "size_class": "small"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.61327,
+              13.00272
+            ],
+            [
+              77.61049,
+              13.0035
+            ],
+            [
+              77.60918,
+              13.00076
+            ],
+            [
+              77.6076,
+              12.99865
+            ],
+            [
+              77.6077,
+              12.99568
+            ],
+            [
+              77.6108,
+              12.99549
+            ],
+            [
+              77.61331,
+              12.99509
+            ],
+            [
+              77.61465,
+              12.99735
+            ],
+            [
+              77.61662,
+              12.99937
+            ],
+            [
+              77.61523,
+              13.00149
+            ],
+            [
+              77.61327,
+              13.00272
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-04",
+        "name": "Simulated Zone D",
+        "risk": "green",
+        "risk_category": "low",
+        "mult_daytime": 0.6,
+        "mult_evening": 0.8,
+        "mult_night": 1,
+        "note": "Illustrative synthetic polygon. First zone in a diagonal chain, used to test routes crossing several zones in sequence. Does not describe any real place, incident or person. Simulated demo data, not real-time safety information.",
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S2_MULTI_ZONE_CHAIN",
+        "size_class": "medium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.53769,
+              12.92545
+            ],
+            [
+              77.53109,
+              12.92006
+            ],
+            [
+              77.52466,
+              12.91571
+            ],
+            [
+              77.52505,
+              12.90816
+            ],
+            [
+              77.53304,
+              12.9074
+            ],
+            [
+              77.54058,
+              12.90778
+            ],
+            [
+              77.54431,
+              12.91436
+            ],
+            [
+              77.5445,
+              12.92153
+            ],
+            [
+              77.53769,
+              12.92545
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-05",
+        "name": "Simulated Zone E",
+        "risk": "yellow",
+        "risk_category": "moderate",
+        "mult_daytime": 1,
+        "mult_evening": 1.1,
+        "mult_night": 1.3,
+        "note": "Illustrative synthetic polygon. Second zone in the diagonal chain. Does not describe any real place, incident or person. Simulated demo data, not real-time safety information.",
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S2_MULTI_ZONE_CHAIN",
+        "size_class": "medium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.55776,
+              12.94671
+            ],
+            [
+              77.5527,
+              12.94533
+            ],
+            [
+              77.54748,
+              12.94298
+            ],
+            [
+              77.54889,
+              12.93746
+            ],
+            [
+              77.55224,
+              12.93329
+            ],
+            [
+              77.55716,
+              12.93501
+            ],
+            [
+              77.56252,
+              12.93702
+            ],
+            [
+              77.56077,
+              12.9424
+            ],
+            [
+              77.55776,
+              12.94671
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-06",
+        "name": "Simulated Zone F",
+        "risk": "red",
+        "risk_category": "elevated",
+        "mult_daytime": 1.7,
+        "mult_evening": 1.4,
+        "mult_night": 1,
+        "note": "Illustrative synthetic polygon. Simulated weight is highest in the daytime profile and falls at night, to show that profile behaviour is not uniform. Does not describe any real place, incident or person. Simulated demo data, not real-time safety information.",
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S2_MULTI_ZONE_CHAIN",
+        "size_class": "medium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.56881,
+              12.96546
+            ],
+            [
+              77.56549,
+              12.95645
+            ],
+            [
+              77.57103,
+              12.95308
+            ],
+            [
+              77.57768,
+              12.95034
+            ],
+            [
+              77.58371,
+              12.95893
+            ],
+            [
+              77.58174,
+              12.96596
+            ],
+            [
+              77.57679,
+              12.97036
+            ],
+            [
+              77.56881,
+              12.96546
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-07",
+        "name": "Simulated Zone G",
+        "risk": "yellow",
+        "risk_category": "moderate",
+        "mult_daytime": 0.9,
+        "mult_evening": 1.2,
+        "mult_night": 1.4,
+        "note": "Illustrative synthetic polygon. Final zone in the diagonal chain. Does not describe any real place, incident or person. Simulated demo data, not real-time safety information.",
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S2_MULTI_ZONE_CHAIN",
+        "size_class": "medium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.59074,
+              12.97609
+            ],
+            [
+              77.59373,
+              12.97241
+            ],
+            [
+              77.59736,
+              12.97494
+            ],
+            [
+              77.60087,
+              12.97636
+            ],
+            [
+              77.60286,
+              12.98053
+            ],
+            [
+              77.59902,
+              12.9837
+            ],
+            [
+              77.5961,
+              12.9866
+            ],
+            [
+              77.59279,
+              12.98475
+            ],
+            [
+              77.58884,
+              12.98382
+            ],
+            [
+              77.58911,
+              12.97961
+            ],
+            [
+              77.59074,
+              12.97609
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-08",
+        "name": "Simulated Zone H",
+        "risk": "red",
+        "risk_category": "elevated",
+        "mult_daytime": 1.1,
+        "mult_evening": 1.4,
+        "mult_night": 1.6,
+        "note": "Illustrative synthetic polygon. Overlaps SZ-09 by design, to test that overlapping affected intervals are merged. Does not describe any real place, incident or person. Simulated demo data, not real-time safety information.",
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S3_OVERLAP_ADJACENT",
+        "size_class": "medium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.56056,
+              13.02182
+            ],
+            [
+              77.56164,
+              13.01406
+            ],
+            [
+              77.56168,
+              13.0069
+            ],
+            [
+              77.5702,
+              13.00388
+            ],
+            [
+              77.57686,
+              13.01004
+            ],
+            [
+              77.58195,
+              13.01635
+            ],
+            [
+              77.57749,
+              13.02229
+            ],
+            [
+              77.56981,
+              13.02562
+            ],
+            [
+              77.56056,
+              13.02182
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-09",
+        "name": "Simulated Zone I",
+        "risk": "yellow",
+        "risk_category": "moderate",
+        "mult_daytime": 0.9,
+        "mult_evening": 1.4,
+        "mult_night": 1.1,
+        "note": "Illustrative synthetic polygon. Overlaps SZ-08 by design; simulated weight peaks in the evening profile. Does not describe any real place, incident or person. Simulated demo data, not real-time safety information.",
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S3_OVERLAP_ADJACENT",
+        "size_class": "medium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.57089,
+              13.01581
+            ],
+            [
+              77.57639,
+              13.01368
+            ],
+            [
+              77.5827,
+              13.01233
+            ],
+            [
+              77.58525,
+              13.01823
+            ],
+            [
+              77.58511,
+              13.02419
+            ],
+            [
+              77.57951,
+              13.02592
+            ],
+            [
+              77.5733,
+              13.02767
+            ],
+            [
+              77.57116,
+              13.02167
+            ],
+            [
+              77.57089,
+              13.01581
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-10",
+        "name": "Simulated Zone J",
+        "risk": "green",
+        "risk_category": "low",
+        "mult_daytime": 0.7,
+        "mult_evening": 0.8,
+        "mult_night": 0.8,
+        "note": "Illustrative synthetic polygon. Adjacent to SZ-08 (boundaries nearly touch), to test routes passing between zones. Does not describe any real place, incident or person. Simulated demo data, not real-time safety information.",
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S3_OVERLAP_ADJACENT",
+        "size_class": "small"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.55189,
+              13.01705
+            ],
+            [
+              77.5518,
+              13.01313
+            ],
+            [
+              77.55521,
+              13.01193
+            ],
+            [
+              77.55907,
+              13.01104
+            ],
+            [
+              77.56061,
+              13.0149
+            ],
+            [
+              77.55836,
+              13.01778
+            ],
+            [
+              77.55508,
+              13.01943
+            ],
+            [
+              77.55189,
+              13.01705
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-11",
+        "name": "Simulated Zone K",
+        "risk": "green",
+        "risk_category": "low",
+        "mult_daytime": 0.7,
+        "mult_evening": 0.8,
+        "mult_night": 1.1,
+        "note": "Illustrative synthetic polygon. Large low-category zone, to test long affected stretches at a low weight. Does not describe any real place, incident or person. Simulated demo data, not real-time safety information.",
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S4_LARGE_NESTED",
+        "size_class": "large"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.62735,
+              13.02741
+            ],
+            [
+              77.62736,
+              13.01319
+            ],
+            [
+              77.64464,
+              13.01338
+            ],
+            [
+              77.65886,
+              13.011
+            ],
+            [
+              77.67523,
+              13.01804
+            ],
+            [
+              77.67139,
+              13.03244
+            ],
+            [
+              77.66969,
+              13.04461
+            ],
+            [
+              77.65502,
+              13.04558
+            ],
+            [
+              77.6407,
+              13.04995
+            ],
+            [
+              77.63108,
+              13.03897
+            ],
+            [
+              77.62735,
+              13.02741
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-12",
+        "name": "Simulated Zone L",
+        "risk": "yellow",
+        "risk_category": "moderate",
+        "mult_daytime": 1,
+        "mult_evening": 1,
+        "mult_night": 1,
+        "note": "Illustrative synthetic polygon. Large moderate zone with flat multipliers, so profile changes have no effect on it alone. SZ-22 sits inside it. Does not describe any real place, incident or person. Simulated demo data, not real-time safety information.",
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S4_LARGE_NESTED",
+        "size_class": "large"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.59416,
+              12.88535
+            ],
+            [
+              77.6106,
+              12.87918
+            ],
+            [
+              77.6245,
+              12.87237
+            ],
+            [
+              77.64178,
+              12.87957
+            ],
+            [
+              77.6388,
+              12.89338
+            ],
+            [
+              77.63343,
+              12.90546
+            ],
+            [
+              77.61595,
+              12.90587
+            ],
+            [
+              77.59921,
+              12.89995
+            ],
+            [
+              77.59416,
+              12.88535
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-13",
+        "name": "Simulated Zone M",
+        "risk": "red",
+        "risk_category": "elevated",
+        "mult_daytime": 1.3,
+        "mult_evening": 1.4,
+        "mult_night": 1.5,
+        "note": "Illustrative synthetic polygon. Large elevated zone at the eastern edge of the demo extent, with a mild rise across profiles. Does not describe any real place, incident or person. Simulated demo data, not real-time safety information.",
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S4_LARGE_NESTED",
+        "size_class": "large"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.70417,
+              12.96082
+            ],
+            [
+              77.71255,
+              12.97204
+            ],
+            [
+              77.71982,
+              12.98561
+            ],
+            [
+              77.70882,
+              12.99545
+            ],
+            [
+              77.69583,
+              12.99918
+            ],
+            [
+              77.68823,
+              12.98747
+            ],
+            [
+              77.68018,
+              12.97439
+            ],
+            [
+              77.69167,
+              12.96541
+            ],
+            [
+              77.70417,
+              12.96082
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-14",
+        "name": "Simulated Zone N",
+        "risk": "yellow",
+        "risk_category": "moderate",
+        "mult_daytime": 1,
+        "mult_evening": 1.1,
+        "mult_night": 1.2,
+        "note": "Illustrative synthetic polygon. Small standalone moderate zone for single-zone crossing tests. Does not describe any real place, incident or person. Simulated demo data, not real-time safety information.",
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S5_SMALL_STANDALONE",
+        "size_class": "small"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.65722,
+              12.93263
+            ],
+            [
+              77.66016,
+              12.93139
+            ],
+            [
+              77.66208,
+              12.93351
+            ],
+            [
+              77.66391,
+              12.93605
+            ],
+            [
+              77.66146,
+              12.93832
+            ],
+            [
+              77.65861,
+              12.93755
+            ],
+            [
+              77.65637,
+              12.93565
+            ],
+            [
+              77.65722,
+              12.93263
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-15",
+        "name": "Simulated Zone O",
+        "risk": "green",
+        "risk_category": "low",
+        "mult_daytime": 0.6,
+        "mult_evening": 0.7,
+        "mult_night": 0.8,
+        "note": "Illustrative synthetic polygon. Small standalone low-category zone. Does not describe any real place, incident or person. Simulated demo data, not real-time safety information.",
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S5_SMALL_STANDALONE",
+        "size_class": "small"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.65155,
+              12.96143
+            ],
+            [
+              77.65432,
+              12.963
+            ],
+            [
+              77.65348,
+              12.96593
+            ],
+            [
+              77.65328,
+              12.96861
+            ],
+            [
+              77.65115,
+              12.97062
+            ],
+            [
+              77.64853,
+              12.96837
+            ],
+            [
+              77.64624,
+              12.96673
+            ],
+            [
+              77.64674,
+              12.96413
+            ],
+            [
+              77.64655,
+              12.96121
+            ],
+            [
+              77.64913,
+              12.96078
+            ],
+            [
+              77.65155,
+              12.96143
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-16",
+        "name": "Simulated Zone P",
+        "risk": "red",
+        "risk_category": "elevated",
+        "mult_daytime": 1.2,
+        "mult_evening": 1.4,
+        "mult_night": 1.7,
+        "note": "Illustrative synthetic polygon. Small standalone elevated zone for single-zone crossing tests. Does not describe any real place, incident or person. Simulated demo data, not real-time safety information.",
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S5_SMALL_STANDALONE",
+        "size_class": "small"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.53076,
+              12.99505
+            ],
+            [
+              77.53279,
+              12.99825
+            ],
+            [
+              77.53494,
+              13.00097
+            ],
+            [
+              77.53331,
+              13.00426
+            ],
+            [
+              77.52945,
+              13.0036
+            ],
+            [
+              77.52602,
+              13.0025
+            ],
+            [
+              77.52555,
+              12.99913
+            ],
+            [
+              77.52684,
+              12.99594
+            ],
+            [
+              77.53076,
+              12.99505
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-17",
+        "name": "Simulated Zone Q",
+        "risk": "yellow",
+        "risk_category": "moderate",
+        "mult_daytime": 0.8,
+        "mult_evening": 1,
+        "mult_night": 1.1,
+        "note": "Illustrative synthetic polygon. Small standalone zone used for near-miss tests. Does not describe any real place, incident or person. Simulated demo data, not real-time safety information.",
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S5_SMALL_STANDALONE",
+        "size_class": "small"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.57016,
+              12.89548
+            ],
+            [
+              77.5727,
+              12.89753
+            ],
+            [
+              77.57507,
+              12.90017
+            ],
+            [
+              77.57283,
+              12.90298
+            ],
+            [
+              77.56984,
+              12.90452
+            ],
+            [
+              77.56747,
+              12.90231
+            ],
+            [
+              77.56493,
+              12.89983
+            ],
+            [
+              77.56733,
+              12.89719
+            ],
+            [
+              77.57016,
+              12.89548
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-18",
+        "name": "Simulated Zone R",
+        "risk": "green",
+        "risk_category": "low",
+        "mult_daytime": 0.6,
+        "mult_evening": 0.7,
+        "mult_night": 0.9,
+        "note": "Illustrative synthetic polygon. Small standalone low-category zone in the south-west. Does not describe any real place, incident or person. Simulated demo data, not real-time safety information.",
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S5_SMALL_STANDALONE",
+        "size_class": "small"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.54523,
+              12.8723
+            ],
+            [
+              77.54185,
+              12.87665
+            ],
+            [
+              77.53796,
+              12.87419
+            ],
+            [
+              77.53396,
+              12.87091
+            ],
+            [
+              77.53607,
+              12.86504
+            ],
+            [
+              77.54047,
+              12.86439
+            ],
+            [
+              77.54467,
+              12.86622
+            ],
+            [
+              77.54523,
+              12.8723
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-19",
+        "name": "Simulated Zone S",
+        "risk": "yellow",
+        "risk_category": "moderate",
+        "mult_daytime": 1.1,
+        "mult_evening": 1.2,
+        "mult_night": 1.2,
+        "note": "Illustrative synthetic polygon. Small standalone zone used for boundary-following tests. Does not describe any real place, incident or person. Simulated demo data, not real-time safety information.",
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S5_SMALL_STANDALONE",
+        "size_class": "small"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.63793,
+              12.99105
+            ],
+            [
+              77.64105,
+              12.99307
+            ],
+            [
+              77.63921,
+              12.99634
+            ],
+            [
+              77.63825,
+              12.99939
+            ],
+            [
+              77.635,
+              13.00151
+            ],
+            [
+              77.63224,
+              12.99873
+            ],
+            [
+              77.62974,
+              12.99668
+            ],
+            [
+              77.63105,
+              12.99374
+            ],
+            [
+              77.63159,
+              12.99039
+            ],
+            [
+              77.635,
+              12.99012
+            ],
+            [
+              77.63793,
+              12.99105
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-20",
+        "name": "Simulated Zone T",
+        "risk": "red",
+        "risk_category": "elevated",
+        "mult_daytime": 1,
+        "mult_evening": 1.7,
+        "mult_night": 1.4,
+        "note": "Illustrative synthetic polygon. Medium-small elevated zone whose simulated weight peaks in the evening profile. Does not describe any real place, incident or person. Simulated demo data, not real-time safety information.",
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S5_SMALL_STANDALONE",
+        "size_class": "medium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.69802,
+              12.92039
+            ],
+            [
+              77.69404,
+              12.92353
+            ],
+            [
+              77.69086,
+              12.92676
+            ],
+            [
+              77.685,
+              12.92498
+            ],
+            [
+              77.68417,
+              12.91971
+            ],
+            [
+              77.68423,
+              12.91496
+            ],
+            [
+              77.68922,
+              12.91391
+            ],
+            [
+              77.69477,
+              12.91524
+            ],
+            [
+              77.69802,
+              12.92039
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-21",
+        "name": "Simulated Zone U",
+        "risk": "green",
+        "risk_category": "low",
+        "mult_daytime": 0.5,
+        "mult_evening": 0.6,
+        "mult_night": 0.8,
+        "note": "Illustrative synthetic polygon. Low-category zone near the northern edge of the demo extent. Does not describe any real place, incident or person. Simulated demo data, not real-time safety information.",
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S5_SMALL_STANDALONE",
+        "size_class": "medium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.57466,
+              13.05588
+            ],
+            [
+              77.57366,
+              13.05077
+            ],
+            [
+              77.57354,
+              13.04502
+            ],
+            [
+              77.57966,
+              13.04338
+            ],
+            [
+              77.58534,
+              13.04412
+            ],
+            [
+              77.58595,
+              13.04928
+            ],
+            [
+              77.58646,
+              13.05498
+            ],
+            [
+              77.58032,
+              13.05626
+            ],
+            [
+              77.57466,
+              13.05588
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-22",
+        "name": "Simulated Zone V",
+        "risk": "red",
+        "risk_category": "elevated",
+        "mult_daytime": 1.2,
+        "mult_evening": 1.3,
+        "mult_night": 1.6,
+        "note": "Illustrative synthetic polygon. Small elevated zone nested inside SZ-12, to test overlap handling between a small and a large zone. Does not describe any real place, incident or person. Simulated demo data, not real-time safety information.",
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S4_LARGE_NESTED",
+        "size_class": "small"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.6346,
+              12.89476
+            ],
+            [
+              77.63306,
+              12.89838
+            ],
+            [
+              77.62945,
+              12.89812
+            ],
+            [
+              77.62555,
+              12.89739
+            ],
+            [
+              77.62575,
+              12.89325
+            ],
+            [
+              77.62899,
+              12.89152
+            ],
+            [
+              77.63268,
+              12.89132
+            ],
+            [
+              77.6346,
+              12.89476
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-23",
+        "name": "Simulated Zone 23",
+        "risk": "red",
+        "risk_category": "elevated",
+        "note": "Illustrative synthetic polygon. small zone. Simulated demo data.",
+        "mult_daytime": 1.4,
+        "mult_evening": 0.8,
+        "mult_night": 1,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "small"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.67439,
+              13.13103
+            ],
+            [
+              77.67389,
+              13.13239
+            ],
+            [
+              77.67185,
+              13.13321
+            ],
+            [
+              77.67115,
+              13.13103
+            ],
+            [
+              77.67178,
+              13.12872
+            ],
+            [
+              77.67413,
+              13.12927
+            ],
+            [
+              77.67439,
+              13.13103
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-24",
+        "name": "Simulated Zone 24",
+        "risk": "green",
+        "risk_category": "low",
+        "note": "Illustrative synthetic polygon. small zone. Simulated demo data.",
+        "mult_daytime": 1.1,
+        "mult_evening": 1.3,
+        "mult_night": 0.5,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "small"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.73204,
+              12.86264
+            ],
+            [
+              77.73134,
+              12.86446
+            ],
+            [
+              77.7294,
+              12.86417
+            ],
+            [
+              77.72737,
+              12.86264
+            ],
+            [
+              77.72908,
+              12.86055
+            ],
+            [
+              77.73096,
+              12.86148
+            ],
+            [
+              77.73204,
+              12.86264
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-25",
+        "name": "Simulated Zone 25",
+        "risk": "yellow",
+        "risk_category": "moderate",
+        "note": "Illustrative synthetic polygon. small zone. Simulated demo data.",
+        "mult_daytime": 1.4,
+        "mult_evening": 1.2,
+        "mult_night": 0.7,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "small"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.69267,
+              13.06958
+            ],
+            [
+              77.69186,
+              13.07128
+            ],
+            [
+              77.6901,
+              13.0711
+            ],
+            [
+              77.68859,
+              13.07174
+            ],
+            [
+              77.68779,
+              13.07033
+            ],
+            [
+              77.68796,
+              13.0689
+            ],
+            [
+              77.68928,
+              13.06863
+            ],
+            [
+              77.69032,
+              13.06681
+            ],
+            [
+              77.6911,
+              13.06852
+            ],
+            [
+              77.69267,
+              13.06958
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-26",
+        "name": "Simulated Zone 26",
+        "risk": "red",
+        "risk_category": "elevated",
+        "note": "Illustrative synthetic polygon. small zone. Simulated demo data.",
+        "mult_daytime": 1.3,
+        "mult_evening": 1.5,
+        "mult_night": 1.5,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "small"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.55933,
+              13.11432
+            ],
+            [
+              77.55775,
+              13.1152
+            ],
+            [
+              77.55605,
+              13.11638
+            ],
+            [
+              77.55539,
+              13.11432
+            ],
+            [
+              77.55648,
+              13.11301
+            ],
+            [
+              77.55863,
+              13.1119
+            ],
+            [
+              77.55933,
+              13.11432
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-27",
+        "name": "Simulated Zone 27",
+        "risk": "green",
+        "risk_category": "low",
+        "note": "Illustrative synthetic polygon. small zone. Simulated demo data.",
+        "mult_daytime": 0.8,
+        "mult_evening": 0.9,
+        "mult_night": 1,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "small"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.57053,
+              12.86304
+            ],
+            [
+              77.56911,
+              12.8655
+            ],
+            [
+              77.56619,
+              12.86458
+            ],
+            [
+              77.56655,
+              12.86176
+            ],
+            [
+              77.56872,
+              12.86178
+            ],
+            [
+              77.57053,
+              12.86304
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-28",
+        "name": "Simulated Zone 28",
+        "risk": "yellow",
+        "risk_category": "moderate",
+        "note": "Illustrative synthetic polygon. small zone. Simulated demo data.",
+        "mult_daytime": 0.7,
+        "mult_evening": 1.6,
+        "mult_night": 0.9,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "small"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.50179,
+              13.11041
+            ],
+            [
+              77.5016,
+              13.11232
+            ],
+            [
+              77.4995,
+              13.11293
+            ],
+            [
+              77.49791,
+              13.11145
+            ],
+            [
+              77.49793,
+              13.10938
+            ],
+            [
+              77.49964,
+              13.10852
+            ],
+            [
+              77.50175,
+              13.1083
+            ],
+            [
+              77.50179,
+              13.11041
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-29",
+        "name": "Simulated Zone 29",
+        "risk": "red",
+        "risk_category": "elevated",
+        "note": "Illustrative synthetic polygon. small zone. Simulated demo data.",
+        "mult_daytime": 1.3,
+        "mult_evening": 1.3,
+        "mult_night": 1.7,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "small"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.55057,
+              13.06753
+            ],
+            [
+              77.5506,
+              13.06934
+            ],
+            [
+              77.54823,
+              13.06983
+            ],
+            [
+              77.5474,
+              13.06753
+            ],
+            [
+              77.54894,
+              13.06647
+            ],
+            [
+              77.55017,
+              13.06648
+            ],
+            [
+              77.55057,
+              13.06753
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-30",
+        "name": "Simulated Zone 30",
+        "risk": "green",
+        "risk_category": "low",
+        "note": "Illustrative synthetic polygon. small zone. Simulated demo data.",
+        "mult_daytime": 0.7,
+        "mult_evening": 1,
+        "mult_night": 0.5,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "small"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.48269,
+              12.89798
+            ],
+            [
+              77.48276,
+              12.89991
+            ],
+            [
+              77.48068,
+              12.90036
+            ],
+            [
+              77.47987,
+              12.89863
+            ],
+            [
+              77.4802,
+              12.89749
+            ],
+            [
+              77.48073,
+              12.89586
+            ],
+            [
+              77.48205,
+              12.89694
+            ],
+            [
+              77.48269,
+              12.89798
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-31",
+        "name": "Simulated Zone 31",
+        "risk": "yellow",
+        "risk_category": "moderate",
+        "note": "Illustrative synthetic polygon. small zone. Simulated demo data.",
+        "mult_daytime": 1.2,
+        "mult_evening": 1.8,
+        "mult_night": 1.5,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "small"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.5642,
+              12.94426
+            ],
+            [
+              77.56412,
+              12.94647
+            ],
+            [
+              77.56187,
+              12.9464
+            ],
+            [
+              77.56123,
+              12.94481
+            ],
+            [
+              77.56007,
+              12.94316
+            ],
+            [
+              77.56209,
+              12.94307
+            ],
+            [
+              77.56312,
+              12.94331
+            ],
+            [
+              77.5642,
+              12.94426
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-32",
+        "name": "Simulated Zone 32",
+        "risk": "red",
+        "risk_category": "elevated",
+        "note": "Illustrative synthetic polygon. small zone. Simulated demo data.",
+        "mult_daytime": 0.7,
+        "mult_evening": 0.6,
+        "mult_night": 1.4,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "small"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.60413,
+              12.85807
+            ],
+            [
+              77.60365,
+              12.85958
+            ],
+            [
+              77.60214,
+              12.85942
+            ],
+            [
+              77.60017,
+              12.85917
+            ],
+            [
+              77.60084,
+              12.8573
+            ],
+            [
+              77.60186,
+              12.85554
+            ],
+            [
+              77.60323,
+              12.85709
+            ],
+            [
+              77.60413,
+              12.85807
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-33",
+        "name": "Simulated Zone 33",
+        "risk": "green",
+        "risk_category": "low",
+        "note": "Illustrative synthetic polygon. medium zone. Simulated demo data.",
+        "mult_daytime": 1,
+        "mult_evening": 1.5,
+        "mult_night": 1.3,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "medium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.56128,
+              13.10064
+            ],
+            [
+              77.55988,
+              13.10587
+            ],
+            [
+              77.5545,
+              13.10472
+            ],
+            [
+              77.55152,
+              13.10064
+            ],
+            [
+              77.55362,
+              13.09504
+            ],
+            [
+              77.55994,
+              13.0953
+            ],
+            [
+              77.56128,
+              13.10064
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-34",
+        "name": "Simulated Zone 34",
+        "risk": "yellow",
+        "risk_category": "moderate",
+        "note": "Illustrative synthetic polygon. medium zone. Simulated demo data.",
+        "mult_daytime": 1.7,
+        "mult_evening": 1.5,
+        "mult_night": 0.7,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "medium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.52965,
+              13.06314
+            ],
+            [
+              77.52954,
+              13.06744
+            ],
+            [
+              77.52546,
+              13.06911
+            ],
+            [
+              77.5223,
+              13.06679
+            ],
+            [
+              77.52021,
+              13.06466
+            ],
+            [
+              77.5198,
+              13.06146
+            ],
+            [
+              77.52237,
+              13.0596
+            ],
+            [
+              77.52551,
+              13.05687
+            ],
+            [
+              77.52802,
+              13.0601
+            ],
+            [
+              77.52965,
+              13.06314
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-35",
+        "name": "Simulated Zone 35",
+        "risk": "red",
+        "risk_category": "elevated",
+        "note": "Illustrative synthetic polygon. medium zone. Simulated demo data.",
+        "mult_daytime": 0.6,
+        "mult_evening": 0.8,
+        "mult_night": 1.3,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "medium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.53965,
+              13.12631
+            ],
+            [
+              77.53686,
+              13.1313
+            ],
+            [
+              77.53129,
+              13.13098
+            ],
+            [
+              77.53128,
+              13.12631
+            ],
+            [
+              77.53205,
+              13.12297
+            ],
+            [
+              77.53555,
+              13.1236
+            ],
+            [
+              77.53965,
+              13.12631
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-36",
+        "name": "Simulated Zone 36",
+        "risk": "green",
+        "risk_category": "low",
+        "note": "Illustrative synthetic polygon. medium zone. Simulated demo data.",
+        "mult_daytime": 0.7,
+        "mult_evening": 1.5,
+        "mult_night": 0.5,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "medium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.74116,
+              13.09217
+            ],
+            [
+              77.74024,
+              13.094
+            ],
+            [
+              77.73841,
+              13.09605
+            ],
+            [
+              77.73339,
+              13.09718
+            ],
+            [
+              77.73173,
+              13.09217
+            ],
+            [
+              77.73606,
+              13.08982
+            ],
+            [
+              77.73841,
+              13.08671
+            ],
+            [
+              77.74186,
+              13.08872
+            ],
+            [
+              77.74116,
+              13.09217
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-37",
+        "name": "Simulated Zone 37",
+        "risk": "yellow",
+        "risk_category": "moderate",
+        "note": "Illustrative synthetic polygon. medium zone. Simulated demo data.",
+        "mult_daytime": 0.5,
+        "mult_evening": 0.6,
+        "mult_night": 1,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "medium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.5709,
+              12.98461
+            ],
+            [
+              77.57157,
+              12.98865
+            ],
+            [
+              77.56785,
+              12.99084
+            ],
+            [
+              77.5639,
+              12.98954
+            ],
+            [
+              77.56143,
+              12.98655
+            ],
+            [
+              77.56289,
+              12.9832
+            ],
+            [
+              77.56337,
+              12.97875
+            ],
+            [
+              77.5678,
+              12.97865
+            ],
+            [
+              77.5697,
+              12.98213
+            ],
+            [
+              77.5709,
+              12.98461
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-38",
+        "name": "Simulated Zone 38",
+        "risk": "red",
+        "risk_category": "elevated",
+        "note": "Illustrative synthetic polygon. medium zone. Simulated demo data.",
+        "mult_daytime": 0.6,
+        "mult_evening": 1.3,
+        "mult_night": 1.2,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "medium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.66511,
+              13.03804
+            ],
+            [
+              77.66444,
+              13.04273
+            ],
+            [
+              77.65907,
+              13.04522
+            ],
+            [
+              77.65802,
+              13.03933
+            ],
+            [
+              77.65633,
+              13.03593
+            ],
+            [
+              77.65943,
+              13.03243
+            ],
+            [
+              77.66414,
+              13.03373
+            ],
+            [
+              77.66511,
+              13.03804
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-39",
+        "name": "Simulated Zone 39",
+        "risk": "green",
+        "risk_category": "low",
+        "note": "Illustrative synthetic polygon. medium zone. Simulated demo data.",
+        "mult_daytime": 1.5,
+        "mult_evening": 0.5,
+        "mult_night": 1.4,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "medium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.47088,
+              13.02775
+            ],
+            [
+              77.46752,
+              13.03148
+            ],
+            [
+              77.4629,
+              13.03497
+            ],
+            [
+              77.45794,
+              13.03093
+            ],
+            [
+              77.45836,
+              13.02477
+            ],
+            [
+              77.46383,
+              13.02461
+            ],
+            [
+              77.46832,
+              13.02303
+            ],
+            [
+              77.47088,
+              13.02775
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-40",
+        "name": "Simulated Zone 40",
+        "risk": "yellow",
+        "risk_category": "moderate",
+        "note": "Illustrative synthetic polygon. medium zone. Simulated demo data.",
+        "mult_daytime": 0.9,
+        "mult_evening": 0.7,
+        "mult_night": 1.2,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "medium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.64807,
+              12.96775
+            ],
+            [
+              77.64726,
+              12.97263
+            ],
+            [
+              77.64299,
+              12.97026
+            ],
+            [
+              77.63852,
+              12.96775
+            ],
+            [
+              77.64268,
+              12.9647
+            ],
+            [
+              77.64648,
+              12.96421
+            ],
+            [
+              77.64807,
+              12.96775
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-41",
+        "name": "Simulated Zone 41",
+        "risk": "red",
+        "risk_category": "elevated",
+        "note": "Illustrative synthetic polygon. medium zone. Simulated demo data.",
+        "mult_daytime": 0.9,
+        "mult_evening": 1,
+        "mult_night": 0.6,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "medium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.63354,
+              12.85403
+            ],
+            [
+              77.63146,
+              12.85648
+            ],
+            [
+              77.62936,
+              12.85867
+            ],
+            [
+              77.62619,
+              12.8581
+            ],
+            [
+              77.62424,
+              12.85559
+            ],
+            [
+              77.62175,
+              12.85156
+            ],
+            [
+              77.62522,
+              12.84828
+            ],
+            [
+              77.62912,
+              12.85072
+            ],
+            [
+              77.63245,
+              12.85074
+            ],
+            [
+              77.63354,
+              12.85403
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-42",
+        "name": "Simulated Zone 42",
+        "risk": "green",
+        "risk_category": "low",
+        "note": "Illustrative synthetic polygon. medium zone. Simulated demo data.",
+        "mult_daytime": 0.8,
+        "mult_evening": 1.5,
+        "mult_night": 1,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "medium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.74475,
+              13.0832
+            ],
+            [
+              77.74383,
+              13.08814
+            ],
+            [
+              77.73816,
+              13.08615
+            ],
+            [
+              77.73996,
+              13.08155
+            ],
+            [
+              77.74313,
+              13.08041
+            ],
+            [
+              77.74475,
+              13.0832
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-43",
+        "name": "Simulated Zone 43",
+        "risk": "yellow",
+        "risk_category": "moderate",
+        "note": "Illustrative synthetic polygon. large zone. Simulated demo data.",
+        "mult_daytime": 0.9,
+        "mult_evening": 1,
+        "mult_night": 0.8,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "large"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.67415,
+              13.04461
+            ],
+            [
+              77.66841,
+              13.05263
+            ],
+            [
+              77.6604,
+              13.06146
+            ],
+            [
+              77.65426,
+              13.05075
+            ],
+            [
+              77.64118,
+              13.04461
+            ],
+            [
+              77.64905,
+              13.03327
+            ],
+            [
+              77.6604,
+              13.03491
+            ],
+            [
+              77.66949,
+              13.03552
+            ],
+            [
+              77.67415,
+              13.04461
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-44",
+        "name": "Simulated Zone 44",
+        "risk": "red",
+        "risk_category": "elevated",
+        "note": "Illustrative synthetic polygon. large zone. Simulated demo data.",
+        "mult_daytime": 0.8,
+        "mult_evening": 1.5,
+        "mult_night": 1.4,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "large"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.73582,
+              13.12323
+            ],
+            [
+              77.73513,
+              13.1317
+            ],
+            [
+              77.72665,
+              13.13949
+            ],
+            [
+              77.71737,
+              13.13251
+            ],
+            [
+              77.71432,
+              13.12323
+            ],
+            [
+              77.71585,
+              13.11242
+            ],
+            [
+              77.72665,
+              13.10449
+            ],
+            [
+              77.73493,
+              13.11495
+            ],
+            [
+              77.73582,
+              13.12323
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-45",
+        "name": "Simulated Zone 45",
+        "risk": "green",
+        "risk_category": "low",
+        "note": "Illustrative synthetic polygon. large zone. Simulated demo data.",
+        "mult_daytime": 1,
+        "mult_evening": 1.1,
+        "mult_night": 1.2,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "large"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.5389,
+              13.08267
+            ],
+            [
+              77.52332,
+              13.0925
+            ],
+            [
+              77.50413,
+              13.09429
+            ],
+            [
+              77.50477,
+              13.07151
+            ],
+            [
+              77.52545,
+              13.0663
+            ],
+            [
+              77.5389,
+              13.08267
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-46",
+        "name": "Simulated Zone 46",
+        "risk": "yellow",
+        "risk_category": "moderate",
+        "note": "Illustrative synthetic polygon. large zone. Simulated demo data.",
+        "mult_daytime": 1.4,
+        "mult_evening": 1.1,
+        "mult_night": 0.7,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "large"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.4754,
+              12.89347
+            ],
+            [
+              77.45905,
+              12.8983
+            ],
+            [
+              77.45535,
+              12.90516
+            ],
+            [
+              77.44896,
+              12.90097
+            ],
+            [
+              77.43539,
+              12.89998
+            ],
+            [
+              77.43436,
+              12.88658
+            ],
+            [
+              77.44294,
+              12.87555
+            ],
+            [
+              77.45667,
+              12.87425
+            ],
+            [
+              77.46393,
+              12.88453
+            ],
+            [
+              77.4754,
+              12.89347
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-47",
+        "name": "Simulated Zone 47",
+        "risk": "red",
+        "risk_category": "elevated",
+        "note": "Illustrative synthetic polygon. large zone. Simulated demo data.",
+        "mult_daytime": 1.3,
+        "mult_evening": 1.2,
+        "mult_night": 0.7,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "large"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.74379,
+              12.85478
+            ],
+            [
+              77.73292,
+              12.87578
+            ],
+            [
+              77.71456,
+              12.86316
+            ],
+            [
+              77.71877,
+              12.84946
+            ],
+            [
+              77.73036,
+              12.84166
+            ],
+            [
+              77.74379,
+              12.85478
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-48",
+        "name": "Simulated Zone 48",
+        "risk": "green",
+        "risk_category": "low",
+        "note": "Illustrative synthetic polygon. large zone. Simulated demo data.",
+        "mult_daytime": 1.3,
+        "mult_evening": 1.8,
+        "mult_night": 1.6,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "large"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.50946,
+              13.08983
+            ],
+            [
+              77.50255,
+              13.10475
+            ],
+            [
+              77.48936,
+              13.09775
+            ],
+            [
+              77.48436,
+              13.08983
+            ],
+            [
+              77.48435,
+              13.07322
+            ],
+            [
+              77.50382,
+              13.0727
+            ],
+            [
+              77.50946,
+              13.08983
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-49",
+        "name": "Simulated Zone 49",
+        "risk": "yellow",
+        "risk_category": "moderate",
+        "note": "Illustrative synthetic polygon. large zone. Simulated demo data.",
+        "mult_daytime": 0.8,
+        "mult_evening": 1.5,
+        "mult_night": 1.7,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "large"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.62379,
+              13.03265
+            ],
+            [
+              77.61413,
+              13.05317
+            ],
+            [
+              77.59932,
+              13.03857
+            ],
+            [
+              77.59915,
+              13.0266
+            ],
+            [
+              77.61337,
+              13.01449
+            ],
+            [
+              77.62379,
+              13.03265
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-50",
+        "name": "Simulated Zone 50",
+        "risk": "red",
+        "risk_category": "elevated",
+        "note": "Illustrative synthetic polygon. large zone. Simulated demo data.",
+        "mult_daytime": 1.8,
+        "mult_evening": 0.6,
+        "mult_night": 1.6,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "large"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.49568,
+              12.91466
+            ],
+            [
+              77.4914,
+              12.9315
+            ],
+            [
+              77.47786,
+              12.92051
+            ],
+            [
+              77.4778,
+              12.90875
+            ],
+            [
+              77.48947,
+              12.90375
+            ],
+            [
+              77.49568,
+              12.91466
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-51",
+        "name": "Simulated Zone 51",
+        "risk": "green",
+        "risk_category": "low",
+        "note": "Illustrative synthetic polygon. large zone. Simulated demo data.",
+        "mult_daytime": 1,
+        "mult_evening": 0.8,
+        "mult_night": 1.3,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "large"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.57704,
+              13.1298
+            ],
+            [
+              77.56439,
+              13.14832
+            ],
+            [
+              77.54436,
+              13.13998
+            ],
+            [
+              77.54632,
+              13.12104
+            ],
+            [
+              77.56301,
+              13.11555
+            ],
+            [
+              77.57704,
+              13.1298
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "SZ-52",
+        "name": "Simulated Zone 52",
+        "risk": "yellow",
+        "risk_category": "moderate",
+        "note": "Illustrative synthetic polygon. large zone. Simulated demo data.",
+        "mult_daytime": 1.1,
+        "mult_evening": 1.1,
+        "mult_night": 0.9,
+        "data_origin": "SYNTHETIC_DEMO_DATA",
+        "is_synthetic": true,
+        "scenario_id": "S_RANDOM_FILL",
+        "size_class": "large"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.63192,
+              12.90548
+            ],
+            [
+              77.61806,
+              12.91097
+            ],
+            [
+              77.61257,
+              12.91486
+            ],
+            [
+              77.6068,
+              12.91125
+            ],
+            [
+              77.60219,
+              12.90548
+            ],
+            [
+              77.60141,
+              12.89432
+            ],
+            [
+              77.61257,
+              12.89747
+            ],
+            [
+              77.62167,
+              12.89638
+            ],
+            [
+              77.63192,
+              12.90548
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

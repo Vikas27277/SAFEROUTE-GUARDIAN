@@ -1,0 +1,283 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sr-main: #08090B;
+  --color-sr-secondary: #101216;
+  --color-sr-elevated: #15181D;
+  --color-sr-card: #191D23;
+  --color-sr-border: #2B3038;
+  --color-sr-border-strong: #3A404A;
+  
+  --color-sr-accent: #C5CAD2;
+  --color-sr-accent-light: #E2E5EA;
+  --color-sr-glow: rgba(210, 218, 230, 0.10);
+
+  --color-sr-text-primary: #F3F4F6;
+  --color-sr-text-secondary: #B0B5BE;
+  --color-sr-text-muted: #7E8591;
+  
+  --color-sr-risk-low: #10B981;
+  --color-sr-risk-moderate: #F59E0B;
+  --color-sr-risk-elevated: #EF4444;
+
+  --animate-fade-in: fadeIn 0.3s ease-in-out;
+  --animate-slide-up: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slideUp {
+    from { transform: translateY(10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes mistSweep {
+    0% {
+      transform: translateX(-150vw) skewX(-15deg);
+      opacity: 0;
+    }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% {
+      transform: translateX(100vw) skewX(-15deg);
+      opacity: 0;
+    }
+  }
+
+}
+
+@layer base {
+  body {
+    background-color: var(--color-sr-main);
+    color: var(--color-sr-text-primary);
+    font-family: 'Inter', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .theme-satellite {
+    /* Elegant sleek dark brown / wood tones for satellite */
+    --color-sr-main: #110C09; /* Very dark espresso brown */
+    --color-sr-secondary: rgba(17, 12, 9, 0.75); /* Translucent dark brown */
+    --color-sr-elevated: rgba(26, 18, 14, 0.8);
+    --color-sr-card: rgba(32, 22, 17, 0.8);
+    --color-sr-border: rgba(89, 66, 54, 0.4);
+    --color-sr-border-strong: rgba(115, 87, 72, 0.5);
+    
+    --color-sr-accent: #D4A373; /* Elegant warm wood/gold accent */
+    --color-sr-accent-light: #E6CCB2; /* Lighter warm accent */
+    --color-sr-glow: rgba(212, 163, 115, 0.15);
+
+    --color-sr-text-primary: #F3EBE1; /* Soft warm off-white */
+    --color-sr-text-secondary: #D4C9C1; /* Muted warm grey/brown */
+    --color-sr-text-muted: #A89D96;
+  }
+}
+
+/* Glassmorphism & Premium Surface utilities */
+@layer utilities {
+  .glass-panel {
+    background: var(--color-sr-secondary);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--color-sr-border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  }
+  
+  .glass-card {
+    background: var(--color-sr-card);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--color-sr-border);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  }
+
+  .premium-button {
+    background: linear-gradient(180deg, #2B3038 0%, #15181D 100%);
+    border: 1px solid var(--color-sr-border-strong);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+    color: var(--color-sr-text-primary);
+    transition: all 0.2s ease;
+  }
+
+  .premium-button:hover {
+    background: linear-gradient(180deg, #3A404A 0%, #191D23 100%);
+    border-color: var(--color-sr-accent);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.15);
+  }
+
+  .premium-input {
+    background: var(--color-sr-main);
+    border: 1px solid var(--color-sr-border);
+    color: var(--color-sr-text-primary);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+    transition: all 0.2s ease;
+  }
+
+  .premium-input:focus {
+    border-color: var(--color-sr-accent);
+    box-shadow: 0 0 0 1px var(--color-sr-accent), inset 0 2px 4px rgba(0,0,0,0.5);
+    outline: none;
+  }
+
+  .mist-element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150vw;
+    height: 100%;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0;
+  }
+
+  .mist-element.theme-green {
+    background: linear-gradient(
+      90deg, 
+      transparent 0%, 
+      rgba(115, 87, 72, 0.4) 20%, 
+      rgba(60, 40, 30, 1) 45%, 
+      rgba(60, 40, 30, 1) 55%, 
+      rgba(115, 87, 72, 0.4) 80%, 
+      transparent 100%
+    );
+  }
+
+  .mist-element.theme-dark {
+    background: linear-gradient(
+      90deg, 
+      transparent 0%, 
+      rgba(8, 9, 11, 0.4) 20%, 
+      rgba(8, 9, 11, 1) 45%, 
+      rgba(8, 9, 11, 1) 55%, 
+      rgba(8, 9, 11, 0.4) 80%, 
+      transparent 100%
+    );
+  }
+
+  .mist-element.active {
+    animation: mistSweep 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .leaf {
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #D4A373 0%, #A67C52 100%);
+    border-radius: 0 100% 0 100%;
+    pointer-events: none;
+    z-index: 1001;
+    opacity: 0;
+    will-change: transform, opacity; /* Force compositor thread */
+    animation: blowLeaf 1.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  }
+
+  @keyframes blowLeaf {
+    0% { 
+      transform: translate3d(-20vw, 0, 0) rotate(0deg) scale(var(--leaf-scale, 1)); 
+      opacity: 0; 
+    }
+    15% { opacity: 0.9; }
+    85% { opacity: 0.9; }
+    100% { 
+      transform: translate3d(120vw, var(--leaf-y, 100px), 0) rotate(var(--leaf-rot, 720deg)) scale(var(--leaf-scale, 1)); 
+      opacity: 0; 
+    }
+  }
+
+  /* Intro Animation Keyframes */
+  @keyframes drawSilverRoute {
+    0% {
+      stroke-dashoffset: 1000;
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    50% {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeReveal {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes cinematicFadeOut {
+    0% { opacity: 1; visibility: visible; }
+    100% { opacity: 0; visibility: hidden; }
+  }
+
+  @keyframes drawShield {
+    0% { stroke-dashoffset: 300; fill-opacity: 0; }
+    50% { stroke-dashoffset: 0; fill-opacity: 0.1; }
+    100% { stroke-dashoffset: 0; fill-opacity: 0.2; }
+  }
+
+  .intro-text-glow {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2), 0 0 30px rgba(255, 255, 255, 0.1);
+  }
+
+  .metallic-text {
+    background: linear-gradient(180deg, #FFFFFF 0%, #9CA3AF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+  }
+
+  @keyframes walkRight {
+    0% { transform: translateX(-50px); opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { transform: translateX(50px); opacity: 0; }
+  }
+
+  .draw-route-anim {
+    animation: drawRoute 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  @keyframes drawRoute {
+    0% { stroke-dashoffset: 500; opacity: 0; }
+    20% { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+  }
+
+  .draw-shield-anim {
+    animation: drawShieldPath 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  @keyframes drawShieldPath {
+    0% { stroke-dashoffset: 100; opacity: 0; }
+    30% { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--color-sr-border-strong);
+  border-radius: 20px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-sr-text-muted);
+}

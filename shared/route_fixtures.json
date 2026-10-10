@@ -1,0 +1,581 @@
+[
+  {
+    "fixture_id": "RF-01",
+    "test_case_no": 1,
+    "title": "Route in uncovered area",
+    "description": "South-east corner with no simulated coverage. Absence of a zone is not evidence of real-world safety.",
+    "geometry_json": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          77.7,
+          12.87
+        ],
+        [
+          77.74,
+          12.9
+        ]
+      ]
+    },
+    "is_valid_geometry": true,
+    "profiles_to_run": "daytime,evening,night",
+    "route_km": 5.471,
+    "expected_zone_ids": [],
+    "expected_affected_km": 0.0,
+    "expected_affected_km_by_zone": {},
+    "unmerged_sum_km": 0.0,
+    "assertion_mode": "exact_km",
+    "notes": "Expect zero zones."
+  },
+  {
+    "fixture_id": "RF-02",
+    "test_case_no": 2,
+    "title": "Single low-category zone",
+    "description": "Straight line through the centre of SZ-18.",
+    "geometry_json": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          77.52,
+          12.87
+        ],
+        [
+          77.56,
+          12.87
+        ]
+      ]
+    },
+    "is_valid_geometry": true,
+    "profiles_to_run": "daytime,evening,night",
+    "route_km": 4.336,
+    "expected_zone_ids": [
+      "SZ-18"
+    ],
+    "expected_affected_km": 1.163,
+    "expected_affected_km_by_zone": {
+      "SZ-18": 1.163
+    },
+    "unmerged_sum_km": 1.163,
+    "assertion_mode": "exact_km",
+    "notes": "One low zone."
+  },
+  {
+    "fixture_id": "RF-03",
+    "test_case_no": 3,
+    "title": "Single moderate-category zone",
+    "description": "North-south line through the centre of SZ-14.",
+    "geometry_json": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          77.66,
+          12.92
+        ],
+        [
+          77.66,
+          12.95
+        ]
+      ]
+    },
+    "is_valid_geometry": true,
+    "profiles_to_run": "daytime,evening,night",
+    "route_km": 3.336,
+    "expected_zone_ids": [
+      "SZ-14"
+    ],
+    "expected_affected_km": 0.719,
+    "expected_affected_km_by_zone": {
+      "SZ-14": 0.719
+    },
+    "unmerged_sum_km": 0.719,
+    "assertion_mode": "exact_km",
+    "notes": "One moderate zone."
+  },
+  {
+    "fixture_id": "RF-04",
+    "test_case_no": 4,
+    "title": "Single elevated-category zone",
+    "description": "East-west line through the centre of SZ-16.",
+    "geometry_json": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          77.51,
+          13
+        ],
+        [
+          77.55,
+          13
+        ]
+      ]
+    },
+    "is_valid_geometry": true,
+    "profiles_to_run": "daytime,evening,night",
+    "route_km": 4.334,
+    "expected_zone_ids": [
+      "SZ-16"
+    ],
+    "expected_affected_km": 0.921,
+    "expected_affected_km_by_zone": {
+      "SZ-16": 0.921
+    },
+    "unmerged_sum_km": 0.921,
+    "assertion_mode": "exact_km",
+    "notes": "One elevated zone."
+  },
+  {
+    "fixture_id": "RF-05",
+    "test_case_no": 5,
+    "title": "Multi-zone diagonal crossing",
+    "description": "South-west to north-east diagonal across the SZ-04 to SZ-07 chain.",
+    "geometry_json": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          77.52,
+          12.905
+        ],
+        [
+          77.605,
+          12.99
+        ]
+      ]
+    },
+    "is_valid_geometry": true,
+    "profiles_to_run": "daytime,evening,night",
+    "route_km": 13.198,
+    "expected_zone_ids": [
+      "SZ-04",
+      "SZ-05",
+      "SZ-06",
+      "SZ-07"
+    ],
+    "expected_affected_km": 6.751,
+    "expected_affected_km_by_zone": {
+      "SZ-04": 2.249,
+      "SZ-05": 1.382,
+      "SZ-06": 1.884,
+      "SZ-07": 1.236
+    },
+    "unmerged_sum_km": 6.751,
+    "assertion_mode": "exact_km",
+    "notes": "Several zones of mixed categories."
+  },
+  {
+    "fixture_id": "RF-06",
+    "test_case_no": 6,
+    "title": "Overlapping zones",
+    "description": "Line through the SZ-08 / SZ-09 overlap region.",
+    "geometry_json": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          77.555,
+          13.015
+        ],
+        [
+          77.592,
+          13.022
+        ]
+      ]
+    },
+    "is_valid_geometry": true,
+    "profiles_to_run": "daytime,evening,night",
+    "route_km": 4.083,
+    "expected_zone_ids": [
+      "SZ-10",
+      "SZ-08",
+      "SZ-09"
+    ],
+    "expected_affected_km": 3.164,
+    "expected_affected_km_by_zone": {
+      "SZ-08": 2.002,
+      "SZ-09": 1.567,
+      "SZ-10": 0.532
+    },
+    "unmerged_sum_km": 4.101,
+    "assertion_mode": "exact_km",
+    "notes": "Merged affected distance must be less than the unmerged per-zone sum and never above route length."
+  },
+  {
+    "fixture_id": "RF-07",
+    "test_case_no": 7,
+    "title": "Route along a zone boundary",
+    "description": "Two-point line exactly on one edge of SZ-19.",
+    "geometry_json": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          77.63793,
+          12.99105
+        ],
+        [
+          77.64105,
+          12.99307
+        ]
+      ]
+    },
+    "is_valid_geometry": true,
+    "profiles_to_run": "daytime,evening,night",
+    "route_km": 0.406,
+    "expected_zone_ids": null,
+    "expected_affected_km": null,
+    "expected_affected_km_by_zone": null,
+    "unmerged_sum_km": null,
+    "assertion_mode": "invariants_only",
+    "notes": "Boundary handling is implementation-defined; assert only 0 <= affected <= route length and a finite bounded score."
+  },
+  {
+    "fixture_id": "RF-08",
+    "test_case_no": 8,
+    "title": "Brief clip of a zone",
+    "description": "East-west line crossing only the northern tip of SZ-03.",
+    "geometry_json": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          77.60260000000001,
+          13.003300000000001
+        ],
+        [
+          77.62162,
+          13.003300000000001
+        ]
+      ]
+    },
+    "is_valid_geometry": true,
+    "profiles_to_run": "daytime,evening,night",
+    "route_km": 2.061,
+    "expected_zone_ids": [
+      "SZ-03"
+    ],
+    "expected_affected_km": 0.088,
+    "expected_affected_km_by_zone": {
+      "SZ-03": 0.088
+    },
+    "unmerged_sum_km": 0.088,
+    "assertion_mode": "exact_km",
+    "notes": "Very short intersection; the whole route must not be treated as affected."
+  },
+  {
+    "fixture_id": "RF-09",
+    "test_case_no": 9,
+    "title": "Same route, all profiles",
+    "description": "Geometry identical to RF-05, to be analysed under daytime, evening and night.",
+    "geometry_json": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          77.52,
+          12.905
+        ],
+        [
+          77.605,
+          12.99
+        ]
+      ]
+    },
+    "is_valid_geometry": true,
+    "profiles_to_run": "daytime,evening,night",
+    "route_km": 13.198,
+    "expected_zone_ids": [
+      "SZ-04",
+      "SZ-05",
+      "SZ-06",
+      "SZ-07"
+    ],
+    "expected_affected_km": 6.751,
+    "expected_affected_km_by_zone": {
+      "SZ-04": 2.249,
+      "SZ-05": 1.382,
+      "SZ-06": 1.884,
+      "SZ-07": 1.236
+    },
+    "unmerged_sum_km": 6.751,
+    "assertion_mode": "exact_km",
+    "notes": "Affected km must be identical across profiles; only weighted results may differ. No new Directions request when switching profile."
+  },
+  {
+    "fixture_id": "RF-10",
+    "test_case_no": 10,
+    "title": "Empty geometry",
+    "description": "LineString with no coordinates.",
+    "geometry_json": {
+      "type": "LineString",
+      "coordinates": []
+    },
+    "is_valid_geometry": false,
+    "profiles_to_run": "any",
+    "route_km": null,
+    "expected_zone_ids": null,
+    "expected_affected_km": null,
+    "expected_affected_km_by_zone": null,
+    "unmerged_sum_km": null,
+    "assertion_mode": "invalid_geometry_rejected",
+    "notes": "Must not throw; expect a neutral, clearly flagged result."
+  },
+  {
+    "fixture_id": "RF-11",
+    "test_case_no": 11,
+    "title": "Malformed coordinates",
+    "description": "Contains null, a string, and a latitude of 95.",
+    "geometry_json": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          77.55,
+          12.95
+        ],
+        [
+          null,
+          12.96
+        ],
+        [
+          "abc",
+          12.97
+        ],
+        [
+          77.58,
+          95
+        ]
+      ]
+    },
+    "is_valid_geometry": false,
+    "profiles_to_run": "any",
+    "route_km": null,
+    "expected_zone_ids": null,
+    "expected_affected_km": null,
+    "expected_affected_km_by_zone": null,
+    "unmerged_sum_km": null,
+    "assertion_mode": "invalid_geometry_rejected",
+    "notes": "Must not throw or produce NaN."
+  },
+  {
+    "fixture_id": "RF-12",
+    "test_case_no": 12,
+    "title": "Valid route, zero intersected zones (near miss)",
+    "description": "Line roughly 60 m south of SZ-17, not touching it.",
+    "geometry_json": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          77.56093,
+          12.894879999999999
+        ],
+        [
+          77.57907,
+          12.894879999999999
+        ]
+      ]
+    },
+    "is_valid_geometry": true,
+    "profiles_to_run": "daytime,evening,night",
+    "route_km": 1.966,
+    "expected_zone_ids": [],
+    "expected_affected_km": 0.0,
+    "expected_affected_km_by_zone": {},
+    "unmerged_sum_km": 0.0,
+    "assertion_mode": "exact_km",
+    "notes": "Expect zero zones despite proximity."
+  },
+  {
+    "fixture_id": "RF-13",
+    "test_case_no": 13,
+    "title": "Swapped axis order",
+    "description": "Latitude/longitude supplied in the wrong order. Numerically valid but outside the demo extent.",
+    "geometry_json": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          12.95,
+          77.55
+        ],
+        [
+          12.96,
+          77.58
+        ]
+      ]
+    },
+    "is_valid_geometry": true,
+    "profiles_to_run": "daytime,evening,night",
+    "route_km": 3.344,
+    "expected_zone_ids": [],
+    "expected_affected_km": 0.0,
+    "expected_affected_km_by_zone": {},
+    "unmerged_sum_km": 0.0,
+    "assertion_mode": "exact_km",
+    "notes": "Expect zero zones; validators should warn that coordinates fall outside the demo extent."
+  },
+  {
+    "fixture_id": "RF-14",
+    "test_case_no": 14,
+    "title": "Direct corridor (shortest, crosses elevated SZ-01)",
+    "description": "Short direct east-west route through SZ-01.",
+    "geometry_json": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          77.592,
+          12.95
+        ],
+        [
+          77.64,
+          12.95
+        ]
+      ]
+    },
+    "is_valid_geometry": true,
+    "profiles_to_run": "daytime,evening,night",
+    "route_km": 5.202,
+    "expected_zone_ids": [
+      "SZ-01"
+    ],
+    "expected_affected_km": 2.772,
+    "expected_affected_km_by_zone": {
+      "SZ-01": 2.772
+    },
+    "unmerged_sum_km": 2.772,
+    "assertion_mode": "exact_km",
+    "notes": "Scenario S1: fastest but lower simulated score."
+  },
+  {
+    "fixture_id": "RF-15",
+    "test_case_no": 15,
+    "title": "Southern detour (crosses low SZ-02)",
+    "description": "Longer route bending south through the low-category zone.",
+    "geometry_json": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          77.592,
+          12.95
+        ],
+        [
+          77.6,
+          12.935
+        ],
+        [
+          77.615,
+          12.93
+        ],
+        [
+          77.64,
+          12.95
+        ]
+      ]
+    },
+    "is_valid_geometry": true,
+    "profiles_to_run": "daytime,evening,night",
+    "route_km": 7.103,
+    "expected_zone_ids": [
+      "SZ-02"
+    ],
+    "expected_affected_km": 1.109,
+    "expected_affected_km_by_zone": {
+      "SZ-02": 1.109
+    },
+    "unmerged_sum_km": 1.109,
+    "assertion_mode": "exact_km",
+    "notes": "Scenario S1: different category from RF-14."
+  },
+  {
+    "fixture_id": "RF-16",
+    "test_case_no": 16,
+    "title": "Northern detour (avoids zones)",
+    "description": "Longer route bending north around SZ-01.",
+    "geometry_json": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          77.592,
+          12.95
+        ],
+        [
+          77.6,
+          12.968
+        ],
+        [
+          77.632,
+          12.968
+        ],
+        [
+          77.64,
+          12.95
+        ]
+      ]
+    },
+    "is_valid_geometry": true,
+    "profiles_to_run": "daytime,evening,night",
+    "route_km": 7.83,
+    "expected_zone_ids": [],
+    "expected_affected_km": 0.0,
+    "expected_affected_km_by_zone": {},
+    "unmerged_sum_km": 0.0,
+    "assertion_mode": "exact_km",
+    "notes": "Scenario S1: longer route with a higher simulated score."
+  },
+  {
+    "fixture_id": "RF-17",
+    "test_case_no": 17,
+    "title": "Parallel route A in SZ-12",
+    "description": "East-west line inside the large moderate zone.",
+    "geometry_json": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          77.585,
+          12.885
+        ],
+        [
+          77.655,
+          12.885
+        ]
+      ]
+    },
+    "is_valid_geometry": true,
+    "profiles_to_run": "daytime,evening,night",
+    "route_km": 7.588,
+    "expected_zone_ids": [
+      "SZ-12"
+    ],
+    "expected_affected_km": 4.934,
+    "expected_affected_km_by_zone": {
+      "SZ-12": 4.934
+    },
+    "unmerged_sum_km": 4.934,
+    "assertion_mode": "exact_km",
+    "notes": "Similar-score pair with RF-18."
+  },
+  {
+    "fixture_id": "RF-18",
+    "test_case_no": 18,
+    "title": "Parallel route B in SZ-12",
+    "description": "Same as RF-17, offset about 170 m north.",
+    "geometry_json": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          77.585,
+          12.8865
+        ],
+        [
+          77.655,
+          12.8865
+        ]
+      ]
+    },
+    "is_valid_geometry": true,
+    "profiles_to_run": "daytime,evening,night",
+    "route_km": 7.588,
+    "expected_zone_ids": [
+      "SZ-12"
+    ],
+    "expected_affected_km": 4.957,
+    "expected_affected_km_by_zone": {
+      "SZ-12": 4.957
+    },
+    "unmerged_sum_km": 4.957,
+    "assertion_mode": "exact_km",
+    "notes": "Similar-score pair with RF-17."
+  }
+]

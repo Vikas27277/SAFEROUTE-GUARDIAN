@@ -1,0 +1,18 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Reports directory
+    match /reports/{reportId}/{imageId} {
+      // Allow read to all (eventually required for public map)
+      allow read: if true;
+      
+      // Allow upload only if authenticated, 
+      // file is an image, and size is under 5MB.
+      // 5 * 1024 * 1024 = 5242880 bytes
+      allow write: if request.auth != null
+                   && request.resource.size < 5242880
+                   && request.resource.contentType.matches('image/.*');
+    }
+  }
+}

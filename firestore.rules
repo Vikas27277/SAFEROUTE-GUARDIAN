@@ -1,0 +1,101 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: reports
+    // Document ID: auto-generated
+    // Fields:
+    //   - userId: string (required) - ID of the user creating the report
+    //   - status: string (required) - Must be 'PENDING' on create
+    //   - upvotes: number (required) - Must be 0 on create
+    //   - createdAt: timestamp (required) - Must be request.time on create
+    //   - updatedAt: timestamp (required) - Must be request.time on create
+    //   - category: string (required, max 50 chars)
+    //   - title: string (required, max 200 chars)
+    //   - description: string (required, max 2000 chars)
+    //   - severity: string (required, max 20 chars)
+    //   - imageUrls: list (required, max 10 items)
+    //   - location: map (required, must have type 'Point' and coordinates list)
+    // ===============================================================
+
+    // ===============================================================
+    // Helper Functions
+    // ===============================================================
+
+    function isAuthenticated() {
+       return request.auth != null;
+    }
+
+    function hasOnlyAllowedFields(fields) {
+      return request.resource.data.keys().hasOnly(fields);
+    }
+
+    function hasRequiredFields(fields) {
+       return request.resource.data.keys().hasAll(fields);
+    }
+
+    function validStringLength(field, minLen, maxLen) {
+       return request.resource.data[field] is string &&
+         request.resource.data[field].size() >= minLen &&
+         request.resource.data[field].size() <= maxLen;
+    }
+
+    // ===============================================================
+    // Domain Validators
+    // ===============================================================
+
+    function isValidImageUrls() {
+      let urls = request.resource.data.imageUrls;
+      return urls is list && urls.size() <= 10;
+    }
+
+    function isValidLocation() {
+      let loc = request.resource.data.location;
+      return loc is map &&
+             loc.keys().hasOnly(['type', 'coordinates']) &&
+             loc.keys().hasAll(['type', 'coordinates']) &&
+             loc.type == 'Point' &&
+             loc.coordinates is list &&
+             loc.coordinates.size() == 2 &&
+             loc.coordinates[0] is number &&
+             loc.coordinates[1] is number;
+    }
+
+    function isValidReportCreate() {
+      let allowedFields = ['userId', 'status', 'upvotes', 'createdAt', 'updatedAt', 'category', 'title', 'description', 'severity', 'imageUrls', 'location'];
+
+      return hasOnlyAllowedFields(allowedFields) &&
+             hasRequiredFields(allowedFields) &&
+             request.resource.data.userId == request.auth.uid &&
+             request.resource.data.status == 'PENDING' &&
+             request.resource.data.upvotes == 0 &&
+             request.resource.data.createdAt == request.time &&
+             request.resource.data.updatedAt == request.time &&
+             validStringLength('category', 1, 50) &&
+             validStringLength('title', 1, 200) &&
+             validStringLength('description', 1, 2000) &&
+             validStringLength('severity', 1, 20) &&
+             isValidImageUrls() &&
+             isValidLocation();
+    }
+
+    // ===============================================================
+    // Collection Rules
+    // ===============================================================
+
+    // Default deny at the root
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    match /reports/{reportId} {
+      allow read: if true;
+      allow create: if isAuthenticated() && isValidReportCreate();
+      allow update, delete: if false;
+    }
+  }
+}

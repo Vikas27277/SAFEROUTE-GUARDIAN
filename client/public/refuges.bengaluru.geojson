@@ -1,0 +1,65 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [77.5946, 12.9716]
+      },
+      "properties": {
+        "id": "refuge-1",
+        "name": "City Hospital",
+        "type": "hospital",
+        "openFrom": "00:00",
+        "openTo": "23:59",
+        "source": "synthetic"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [77.6050, 12.9780]
+      },
+      "properties": {
+        "id": "refuge-2",
+        "name": "Central Police Station",
+        "type": "police",
+        "openFrom": "00:00",
+        "openTo": "23:59",
+        "source": "synthetic"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [77.5850, 12.9650]
+      },
+      "properties": {
+        "id": "refuge-3",
+        "name": "24/7 Apollo Pharmacy",
+        "type": "pharmacy",
+        "openFrom": "00:00",
+        "openTo": "23:59",
+        "source": "synthetic"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [77.6100, 12.9600]
+      },
+      "properties": {
+        "id": "refuge-4",
+        "name": "Shell Petrol Pump",
+        "type": "petrol",
+        "openFrom": "00:00",
+        "openTo": "23:59",
+        "source": "synthetic"
+      }
+    }
+  ]
+}
